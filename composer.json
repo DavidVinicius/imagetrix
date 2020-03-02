@@ -1,0 +1,12 @@
+{
+    "name": "davidvinicius/imagetrix",
+    "description": "A short library to convert images in matrix.",
+    "type": "library",
+    "license": "GLP",
+    "require": {
+        "numphp/numphp": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {"Imagetrix\\": "src"}
+    }
+}
