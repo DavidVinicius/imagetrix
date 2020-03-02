@@ -2,7 +2,7 @@
     "name": "davidvinicius/imagetrix",
     "description": "A short library to convert images in matrix.",
     "type": "library",
-    "license": "GLP",
+    "license": "MIT",
     "require": {
         "php": "^7.0"
     },
