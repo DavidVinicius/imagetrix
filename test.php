@@ -12,7 +12,7 @@ use NumPHP\Core\NumArray;
 
 //var_dump($matrixA);
 
-print_r(Imagetrix::toBinaryMatrix("./image2.png", 128));
+print_r(Imagetrix::toBinaryVector("./image2.png", 128));
 
 //echo Imagetrix::draw($matrixA);
 
