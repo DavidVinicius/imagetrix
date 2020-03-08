@@ -46,7 +46,11 @@ class Imagetrix
 
     public static function toBinaryMatrix($file, $fudge = 0)
     {
-        $img    = self::createImage($file);
+        if (is_string($file)) {
+            $img = self::createImage($img);
+        } else {
+            $img = $file;
+        }
 
         $width  = imagesx($img);
         $height = imagesy($img);
@@ -72,8 +76,12 @@ class Imagetrix
 
     public static function toMatrix($file)
     {        
-        
-        $img    = self::createImage($file);
+        if (is_string($file)) {
+            $img = self::createImage($file);
+        } else {
+            $img = $file;
+        }
+            
         $width  = imagesx($img);
         $height = imagesy($img);
         $matrix = [];
@@ -125,8 +133,11 @@ class Imagetrix
         return ["R" => $r, "G" => $g, "B" => $b];
     }
     
-    public static function draw($matrix)
+    public static function draw($img, $width, $height)
     {
+        $img    = self::resize($img, $width, $height);
+        $matrix = self::toBinaryMatrix($img);
+
         $image = "";
         foreach ($matrix as $line) {
             $image .= implode('', $line).PHP_EOL;                        
