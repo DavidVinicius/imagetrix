@@ -47,7 +47,7 @@ class Imagetrix
     public static function toBinaryMatrix($file, $fudge = 0)
     {
         if (is_string($file)) {
-            $img = self::createImage($img);
+            $img = self::createImage($file);
         } else {
             $img = $file;
         }
