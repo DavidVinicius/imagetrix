@@ -1,7 +1,6 @@
 {
     "name": "davidvinicius/imagetrix",
     "description": "A short library to convert images in matrix.",
-    "version": "master",
     "keywords": ["image", "matrix", "vector", "convert"],
     "minimum-stability": "dev",
     "type": "library",
